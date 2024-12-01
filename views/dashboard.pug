@@ -1,0 +1,506 @@
+extends ./common/layout 
+
+block content
+ <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+            <!--begin::Entry-->
+            <div class="d-flex flex-column-fluid">
+              <!--begin::Container-->
+              <div class="container">
+                <!--begin::Dashboard-->
+                <!--begin::Row-->
+                <div class="row">
+                  //- <div class="col-xl-4">
+                  //-   <!--begin::Engage Widget 8-->
+                  //-   <div class="card card-custom gutter-b card-stretch card-shadowless">
+                  //-     <div class="card-body p-0 d-flex">
+                  //-       <div class="d-flex align-items-start justify-content-start flex-grow-1 bg-light-success p-8 card-rounded flex-grow-1 position-relative">
+                  //-         <div class="d-flex flex-column align-items-center flex-grow-1 h-100">
+                  //-           <div class="p-1 flex-grow-1">
+                  //-             <a href="#!" data-toggle='modal' data-target='#todayVisitor'><h4 class="text-dark-50 font-weight-bolder">Todays Visitor</h4></a>
+                  //-             <h2 class="text-dark font-weight-bolder mt-3 ml-10">#{todayVisitorCount}</h2>
+                  //-           </div>
+                  //-         </div>
+                  //-       </div>
+                  //-     </div>
+                  //-   </div>
+                  //-   <!--end::Engage Widget 8-->
+                  //- </div>
+                  <div class="col-xl-4">
+                    <!--begin: Stats Widget 19-->
+                    <div class="card card-custom bg-light-success card-stretch gutter-b">
+                      <!--begin::Body-->
+                      <div class="card-body my-3">
+                        <a href="#" data-toggle='modal' data-target='#todayVisitor' class="card-title font-weight-bolder text-success text-hover-state-dark font-size-h6 mb-4 d-block">Todays Visitor</a>
+                        <div class="font-weight-bold text-muted font-size-sm">
+                        <span class="text-dark-75 font-size-h2 font-weight-bolder mr-2">#{todayVisitorCount}</span>(Total)</div>
+                        <div class="progress progress-xs mt-7 bg-success-o-60">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: #{todayProgress}%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <!--end:: Body-->
+                    </div>
+                    <!--end: Stats:Widget 19-->
+                  </div>
+                  <div class="col-xl-4">
+                    <!--begin: Stats Widget 19-->
+                    <div class="card card-custom bg-light-warning card-stretch gutter-b">
+                      <!--begin::Body-->
+                      <div class="card-body my-3">
+                        <a href="#" data-toggle='modal' data-target='#weekVisitor' class="card-title font-weight-bolder text-warning text-hover-state-dark font-size-h6 mb-4 d-block">This Weeks Visitor</a>
+                        <div class="font-weight-bold text-muted font-size-sm">
+                        <span class="text-dark-75 font-size-h2 font-weight-bolder mr-2">#{weekVisitorCount}</span>(Total)</div>
+                        <div class="progress progress-xs mt-7 bg-warning-o-60">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: #{weekProgress}%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <!--end:: Body-->
+                    </div>
+                    <!--end: Stats:Widget 19-->
+                  </div>
+                  <div class="col-xl-4">
+                    <!--begin: Stats Widget 19-->
+                    <div class="card card-custom bg-light-info card-stretch gutter-b">
+                      <!--begin::Body-->
+                      <div class="card-body my-3">
+                        <a href="#" data-toggle='modal' data-target='#monthVisitor' class="card-title font-weight-bolder text-info text-hover-state-dark font-size-h6 mb-4 d-block">This Months Visitor</a>
+                        <div class="font-weight-bold text-muted font-size-sm">
+                        <span class="text-dark-75 font-size-h2 font-weight-bolder mr-2">#{monthVisitorCount}</span>(Total)</div>
+                        <div class="progress progress-xs mt-7 bg-info-o-60">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: #{monthProgress}%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <!--end:: Body-->
+                    </div>
+                    <!--end: Stats:Widget 19-->
+                  </div>
+                </div>
+                <!--end::Row-->
+                <!--begin::Row-->
+                <div class="row">
+                  <div class="col-xl-8">
+                    <!--begin::Charts Widget 2-->
+                    <div class="card card-custom bg-gray-100 gutter-b card-stretch card-shadowless">
+                      <!--begin::Header-->
+                      <div class="card-header h-auto border-0">
+                        <!--begin::Title-->
+                        <div class="card-title py-5">
+                          <h3 class="card-label">
+                            <span class="d-block text-dark font-weight-bolder">Month wise Visitors</span>
+                          </h3>
+                        </div>
+                        <!--end::Title-->
+                        <!--begin::Toolbar-->
+                        //- <div class="card-toolbar">
+                        //-   <ul class="nav nav-pills nav-pills-sm nav-dark-75" role="tablist">
+                        //-     <li class="nav-item">
+                        //-       <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_charts_widget_2_chart_tab_1">
+                        //-         <span class="nav-text font-size-sm">Month</span>
+                        //-       </a>
+                        //-     </li>
+                        //-     <li class="nav-item">
+                        //-       <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_charts_widget_2_chart_tab_2">
+                        //-         <span class="nav-text font-size-sm">Week</span>
+                        //-       </a>
+                        //-     </li>
+                        //-     <li class="nav-item">
+                        //-       <a class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_charts_widget_2_chart_tab_3">
+                        //-         <span class="nav-text font-size-sm">Day</span>
+                        //-       </a>
+                        //-     </li>
+                        //-   </ul>
+                        //- </div>
+                        <!--end::Toolbar-->
+                      </div>
+                      <!--end::Header-->
+                      <!--begin::Body-->
+                      <div class="card-body">
+                        <!--begin::Chart-->
+                        <div id="kt_charts_widget_2_chart"></div>
+                        <!--end::Chart-->
+                      </div>
+                      <!--end::Body-->
+                    </div>
+                    <!--end::Charts Widget 2-->
+                  </div>
+                  <div class="col-xl-4">
+                    <!--begin::List Widget 2-->
+                    <div class="card card-custom bg-light-success gutter-b card-stretch card-shadowless">
+                      <!--begin::Header-->
+                      <div class="card-header border-0">
+                        <h3 class="card-title font-weight-bolder text-success">Current Visitors</h3>
+                        <div class="card-toolbar">
+                          <div class="dropdown dropdown-inline">
+                            <a href="#" class="btn btn-clean btn-hover-success btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="ki ki-bold-more-ver text-success"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                              <!--begin::Naviigation-->
+                              <ul class="navi">
+                                <li class="navi-header font-weight-bold py-5">
+                                  <span class="font-size-lg">Add New:</span>
+                                  <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
+                                </li>
+                                <li class="navi-separator mb-3 opacity-70"></li>
+                                <li class="navi-item">
+                                  <a href="#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="flaticon2-shopping-cart-1"></i>
+                                    </span>
+                                    <span class="navi-text">Order</span>
+                                  </a>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="navi-icon flaticon2-calendar-8"></i>
+                                    </span>
+                                    <span class="navi-text">Members</span>
+                                    <span class="navi-label">
+                                      <span class="label label-light-danger label-rounded font-weight-bold">3</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="navi-icon flaticon2-telegram-logo"></i>
+                                    </span>
+                                    <span class="navi-text">Project</span>
+                                  </a>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="navi-icon flaticon2-new-email"></i>
+                                    </span>
+                                    <span class="navi-text">Record</span>
+                                    <span class="navi-label">
+                                      <span class="label label-light-success label-rounded font-weight-bold">5</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li class="navi-separator mt-3 opacity-70"></li>
+                                <li class="navi-footer pt-5 pb-4">
+                                  <a class="btn btn-light-primary font-weight-bolder btn-sm" href="#">More options</a>
+                                  <a class="btn btn-clean font-weight-bold btn-sm d-none" href="#" data-toggle="tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
+                                </li>
+                              </ul>
+                              <!--end::Naviigation-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end::Header-->
+                      <!--begin::Body-->
+
+                      <div class="card-body pt-2">
+                        <!--begin::Item-->
+                        each val in currentVisitor 
+                         <div class="d-flex align-items-center mb-10">
+                          <!--begin::Symbol-->
+                          <div class="symbol symbol-40 symbol-light-white mr-5">
+                            //- <div class="symbol-label">
+                            //-   <img src="assets/media/svg/avatars/004-boy-1.svg" class="h-75 align-self-end" alt="" />
+                            //- </div>
+                            <div class="symbol-label zoom">
+                              <img src="/images/#{val.image}" class="h-75 align-self-end" alt="" />
+                            </div>
+                          </div>
+                          <!--end::Symbol-->
+                          <!--begin::Text-->
+                          <div class="d-flex flex-column font-weight-bold">
+                            <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">#{val.fullname}</a>
+                            <span class="text-muted">#{val.mobile}</span>
+                          </div>
+                          <!--end::Text-->
+                         </div>
+                        <!--end::Item-->
+                        //- <!--begin::Item-->
+                        //- <div class="d-flex align-items-center mb-10">
+                        //-   <!--begin::Symbol-->
+                        //-   <div class="symbol symbol-40 symbol-light-white mr-5">
+                        //-     <div class="symbol-label">
+                        //-       <img src="assets/media/svg/avatars/002-girl.svg" class="h-75 align-self-end" alt="" />
+                        //-     </div>
+                        //-   </div>
+                        //-   <!--end::Symbol-->
+                        //-   <!--begin::Text-->
+                        //-   <div class="d-flex flex-column font-weight-bold">
+                        //-     <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Anne Clarc</a>
+                        //-     <span class="text-muted">Creative Director</span>
+                        //-   </div>
+                        //-   <!--end::Text-->
+                        //- </div>
+                        //- <!--end::Item-->
+                        //- <!--begin::Item-->
+                        //- <div class="d-flex align-items-center mb-10">
+                        //-   <!--begin::Symbol-->
+                        //-   <div class="symbol symbol-40 symbol-light-white mr-5">
+                        //-     <div class="symbol-label">
+                        //-       <img src="assets/media/svg/avatars/007-boy-2.svg" class="h-75 align-self-end" alt="" />
+                        //-     </div>
+                        //-   </div>
+                        //-   <!--end::Symbol-->
+                        //-   <!--begin::Text-->
+                        //-   <div class="d-flex flex-column font-weight-bold">
+                        //-     <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Kristaps Zumman</a>
+                        //-     <span class="text-muted">Lead Developer</span>
+                        //-   </div>
+                        //-   <!--end::Text-->
+                        //- </div>
+                        //- <!--end::Item-->
+                        //- <!--begin::Item-->
+                        //- <div class="d-flex align-items-center mb-10">
+                        //-   <!--begin::Symbol-->
+                        //-   <div class="symbol symbol-40 symbol-light-white mr-5">
+                        //-     <div class="symbol-label">
+                        //-       <img src="assets/media/svg/avatars/008-boy-3.svg" class="h-75 align-self-end" alt="" />
+                        //-     </div>
+                        //-   </div>
+                        //-   <!--end::Symbol-->
+                        //-   <!--begin::Text-->
+                        //-   <div class="d-flex flex-column font-weight-bold">
+                        //-     <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Randy Trent</a>
+                        //-     <span class="text-muted">Backend Developer</span>
+                        //-   </div>
+                        //-   <!--end::Text-->
+                        //- </div>
+                        //- <!--end::Item-->
+                        //- <!--begin::Item-->
+                        //- <div class="d-flex align-items-center mb-2">
+                        //-   <!--begin::Symbol-->
+                        //-   <div class="symbol symbol-40 symbol-light-white mr-5">
+                        //-     <div class="symbol-label">
+                        //-       <img src="assets/media/svg/avatars/009-boy-4.svg" class="h-75 align-self-end" alt="" />
+                        //-     </div>
+                        //-   </div>
+                        //-   <!--end::Symbol-->
+                        //-   <!--begin::Text-->
+                        //-   <div class="d-flex flex-column font-weight-bold">
+                        //-     <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Carles Puyol</a>
+                        //-     <span class="text-muted">Project Manager</span>
+                        //-   </div>
+                        //-   <!--end::Text-->
+                        //- </div>
+                        //- <!--end::Item-->
+                      </div>
+                      <!--end::Body-->
+
+                    </div>
+                    <!--end::List Widget 2-->
+                  </div>
+                </div>
+                <!--end::Row-->
+                
+                <!--end::Dashboard-->
+              </div>
+              <!--end::Container-->
+            </div>
+            <!--end::Entry-->
+ </div>
+  //-  today visitor
+  <div class="modal fade" id="todayVisitor" tabindex="-1" role="dialog" aria-labelledby="exampleModalSizeLg" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable model-lg" role="document" style="max-width: 80%;">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #f4f5f7;">
+          <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-users"></i>&nbsp;Todays Visitor</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i aria-hidden="true" class="ki ki-close"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Visitor Name</th>
+                    <th>Visitor Mobile</th>
+                    <th>From</th>
+                    <th>Purpose</th>
+                    <th>Employee Name</th>
+                    <th>In Time</th>
+                    <th>Duration</th>
+                    <th>Created By</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                   each val in todayVisitor 
+                    <tr>
+                      <td>
+                        <span>#{val.fullname}</span>
+                      </td>
+                      <td>
+                        <span>#{val.mobile}</span>
+                      </td>
+                      <td>
+                        <span>#{val.from}</span>
+                      </td>
+                      <td>
+                        <span>#{val.purpose.purposename}</span>
+                      </td>
+                      <td>
+                        <span>#{val.emp_info.emp_name}</span>
+                      </td>
+                      <td>
+                        <span>#{new Date(val.time_in).toLocaleDateString('en-ca')+' '+new Date(val.time_in).toLocaleTimeString()}</span>
+                      </td>
+                      <td>
+                        <span>#{val.duration}</span>
+                      </td>
+                      <td>
+                        <span>#{val.created_by.name}</span>
+                      </td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+      </div>
+      <div class="modal-footer margin18">
+        <button type="submit" class="btn btn-success font-weight-bold" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+ </div>
+
+  //-  this weeks visitor
+ <div class="modal fade" id="weekVisitor" tabindex="-1" role="dialog" aria-labelledby="exampleModalSizeLg" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable model-lg" role="document" style="max-width: 80%;">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #f4f5f7;">
+          <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-users"></i>&nbsp;This Weeks Visitor</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i aria-hidden="true" class="ki ki-close"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+          <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Visitor Name</th>
+                    <th>Visitor Mobile</th>
+                    <th>From</th>
+                    <th>Purpose</th>
+                    <th>Employee Name</th>
+                    <th>In Time</th>
+                    <th>Duration</th>
+                    <th>Created By</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                   each val in weekVisitor 
+                    <tr>
+                      <td>
+                        <span>#{val.fullname}</span>
+                      </td>
+                      <td>
+                        <span>#{val.mobile}</span>
+                      </td>
+                      <td>
+                        <span>#{val.from}</span>
+                      </td>
+                      <td>
+                        <span>#{val.purpose.purposename}</span>
+                      </td>
+                      <td>
+                        <span>#{val.emp_info.emp_name}</span>
+                      </td>
+                      <td>
+                        <span>#{new Date(val.time_in).toLocaleDateString('en-ca')+' '+new Date(val.time_in).toLocaleTimeString()}</span>
+                      </td>
+                      <td>
+                        <span>#{val.duration}</span>
+                      </td>
+                      <td>
+                        <span>#{val.created_by.name}</span>
+                      </td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+      </div>
+      <div class="modal-footer margin18">
+        <button type="submit" class="btn btn-success font-weight-bold" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+ </div>
+ </div>
+
+ //-  this months visitor
+ <div class="modal fade" id="monthVisitor" tabindex="-1" role="dialog" aria-labelledby="exampleModalSizeLg" aria-hidden="true">
+    <div class="modal-dialog model-lg" role="document" style="max-width: 80%;">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #f4f5f7;">
+          <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-users"></i>&nbsp;This Months Visitor</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i aria-hidden="true" class="ki ki-close"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+          <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                   <th>Visitor Name</th>
+                    <th>Visitor Mobile</th>
+                    <th>From</th>
+                    <th>Purpose</th>
+                    <th>Employee Name</th>
+                    <th>In Time</th>
+                    <th>Duration</th>
+                    <th>Created By</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                   each val in monthVisitor 
+                    <tr>
+                      <td>
+                        <span>#{val.fullname}</span>
+                      </td>
+                      <td>
+                        <span>#{val.mobile}</span>
+                      </td>
+                      <td>
+                        <span>#{val.from}</span>
+                      </td>
+                      <td>
+                        <span>#{val.purpose.purposename}</span>
+                      </td>
+                      <td>
+                        <span>#{val.emp_info.emp_name}</span>
+                      </td>
+                      <td>
+                        <span>#{new Date(val.time_in).toLocaleDateString('en-ca')+' '+new Date(val.time_in).toLocaleTimeString()}</span>
+                      </td>
+                      <td>
+                        <span>#{val.duration}</span>
+                      </td>
+                      <td>
+                        <span>#{val.created_by.name}</span>
+                      </td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+      </div>
+      <div class="modal-footer margin18">
+        <button type="submit" class="btn btn-success font-weight-bold" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+ </div>
+ </div>
+
+ block extra_script
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ script.
+  //- $(document).ready(function(){
+  //-   $('#todayVisitor').on('click',function(){
+  //-     console.log('hiiiii')
+  //-   })
+  //- })
+

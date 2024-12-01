@@ -1,0 +1,1521 @@
+[{
+  "_id": {
+    "$oid": "6437b58ec3c3d96923f18b1b"
+  },
+  "cardno": "Test123",
+  "time_in": {
+    "$date": "2023-04-13T07:55:58.196Z"
+  },
+  "time_out": {
+    "$date": "2023-04-13T07:55:58.196Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Elahee",
+  "mobile": "01700704427",
+  "from": "Banani",
+  "image": "1681372558132pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Mohammed Tanvir Siddique",
+    "emp_mobile": "01730311601",
+    "designation": "Assistant General Manager",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-04-13T07:55:58.204Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T07:55:58.204Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6437d22fc3c3d96923f18b1c"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-04-13T09:58:07.477Z"
+  },
+  "time_out": {
+    "$date": "2023-04-14T21:50:09.529Z"
+  },
+  "duration": "1 d : 11 h : 52 m",
+  "status": "2",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1681379886863pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Atikur Rahman",
+    "emp_mobile": "01700704434",
+    "designation": "Senior Cash Officer",
+    "department": "Group Corporate Finance & Treasury"
+  },
+  "created_by": {
+    "_id": "61d4054c162df871d1d69cfe",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-04-13T09:58:07.484Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-14T21:50:09.539Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fff7d04d08807dca8da06c"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-12T05:32:00.366Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T08:59:46.294Z"
+  },
+  "duration": "5 d : 3 h : 27 m",
+  "status": "2",
+  "fullname": "Tanvir Ismile",
+  "mobile": "01516123934",
+  "from": "BTSL",
+  "image": "1694496719833pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Mst. Sanjida Akter",
+    "emp_mobile": "01516154382",
+    "designation": "Team Member",
+    "department": "Restaurant Operation"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-12T05:32:00.373Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T08:59:46.297Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fff8364d08807dca8da06d"
+  },
+  "cardno": "123456",
+  "time_in": {
+    "$date": "2023-09-12T05:33:42.612Z"
+  },
+  "time_out": {
+    "$date": "2023-09-12T05:33:42.612Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Tanvir Ismile",
+  "mobile": "01516123934",
+  "from": "BTSL",
+  "image": "1694496821938pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Shazahan Chudury",
+    "emp_mobile": "01675336698",
+    "designation": "Team Member",
+    "department": "Restaurant Operation"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-12T05:33:42.613Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-12T05:33:42.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6500002b4d08807dca8da06e"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-12T06:07:39.962Z"
+  },
+  "time_out": {
+    "$date": "2023-09-12T07:46:12.569Z"
+  },
+  "duration": "0 d : 1 h : 38 m",
+  "status": "2",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694498859293pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Safayet Abdullah",
+    "emp_mobile": "01713186922",
+    "designation": "Manager",
+    "department": "Project Management Office"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-12T06:07:39.969Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-12T07:46:12.579Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6500182e4d08807dca8da06f"
+  },
+  "cardno": "4454",
+  "time_in": {
+    "$date": "2023-09-12T07:50:06.621Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T03:26:18.183Z"
+  },
+  "duration": "4 d : 19 h : 36 m",
+  "status": "2",
+  "fullname": "Elahee",
+  "mobile": "01700704427",
+  "from": "Banani",
+  "image": "1694505006141pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Khaled Hossain",
+    "emp_mobile": "01700704440",
+    "designation": "Senior Engineer",
+    "department": "Business Development"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-12T07:50:06.628Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T03:26:18.191Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650018ad4d08807dca8da070"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-12T07:52:13.703Z"
+  },
+  "time_out": {
+    "$date": "2023-09-12T07:52:13.703Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Elahee",
+  "mobile": "01700704427",
+  "from": "Banani",
+  "image": "1694505133585pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Manik Molla",
+    "emp_mobile": "01700704423",
+    "designation": "Senior Engineer",
+    "department": "Operation"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-12T07:52:13.704Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-12T07:52:13.704Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506716c6aa17b1e429ba306"
+  },
+  "cardno": "yyy677",
+  "time_in": {
+    "$date": "2023-09-17T03:24:28.980Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T03:48:20.484Z"
+  },
+  "duration": "0 d : 0 h : 23 m",
+  "status": "2",
+  "fullname": "Reazul",
+  "mobile": "01700704425",
+  "from": "Mirpur",
+  "image": "1694921068629pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Aliwardy Khandkar",
+    "emp_mobile": "01713186978",
+    "designation": "Advisor",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T03:24:28.987Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T03:48:20.487Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650690286aa17b1e429ba307"
+  },
+  "cardno": "56u",
+  "time_in": {
+    "$date": "2023-09-17T05:35:36.480Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T05:37:33.352Z"
+  },
+  "duration": "0 d : 0 h : 1 m",
+  "status": "2",
+  "fullname": "Elahee",
+  "mobile": "01700704427",
+  "from": "Banani",
+  "image": "1694928935941pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Rokib Mahmud",
+    "emp_mobile": "01713461138",
+    "designation": "Chief Corporate and Regulatory Affairs Officer",
+    "department": "Corporate Affairs"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T05:35:36.487Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T05:37:33.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ad766aa17b1e429ba308"
+  },
+  "cardno": "2-537",
+  "time_in": {
+    "$date": "2023-09-17T07:40:38.834Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:40:38.834Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01750894508",
+  "from": "Bangla Trac",
+  "image": "1694936438228pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Naim Hossin",
+    "emp_mobile": "01708132094",
+    "designation": "Executive",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:40:38.841Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:40:38.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae2b6aa17b1e429ba309"
+  },
+  "cardno": "2-537",
+  "time_in": {
+    "$date": "2023-09-17T07:43:39.011Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:43:39.011Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936618328pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:43:39.012Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:43:39.012Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae326aa17b1e429ba30a"
+  },
+  "cardno": "2-537",
+  "time_in": {
+    "$date": "2023-09-17T07:43:46.921Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:43:46.921Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936626237pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:43:46.922Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:43:46.922Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae436aa17b1e429ba30b"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T07:44:03.091Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:44:03.091Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936642406pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:44:03.092Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:44:03.092Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae486aa17b1e429ba30c"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T07:44:08.260Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T08:58:38.351Z"
+  },
+  "duration": "0 d : 1 h : 14 m",
+  "status": "2",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936647577pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:44:08.261Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T08:58:38.358Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae506aa17b1e429ba30d"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T07:44:16.089Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:44:16.089Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936655403pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:44:16.089Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:44:16.089Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae5f6aa17b1e429ba30e"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T07:44:31.947Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:44:31.947Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936671264pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:44:31.948Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:44:31.948Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae6e6aa17b1e429ba30f"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T07:44:46.710Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:44:46.710Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936686026pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:44:46.711Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:44:46.711Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae846aa17b1e429ba310"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T07:45:08.672Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T07:45:08.672Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936707988pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:45:08.673Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T07:45:08.673Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6506ae936aa17b1e429ba311"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T07:45:23.770Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T08:59:19.541Z"
+  },
+  "duration": "0 d : 1 h : 13 m",
+  "status": "2",
+  "fullname": "Naim",
+  "mobile": "01708132094",
+  "from": "BTSL",
+  "image": "1694936723086pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Bayezid Haque",
+    "emp_mobile": "01709647284",
+    "designation": "Engineer",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T07:45:23.771Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T08:59:19.544Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650705e06aa17b1e429ba312"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-17T13:57:52.419Z"
+  },
+  "time_out": {
+    "$date": "2023-09-17T13:57:52.419Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Robiul",
+  "mobile": "01797240571",
+  "from": "B Trac",
+  "image": "1694959071755pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Naim Hossin",
+    "emp_mobile": "01708132094",
+    "designation": "Executive",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-17T13:57:52.428Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-17T13:57:52.428Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650809506aa17b1e429ba313"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-18T08:24:48.863Z"
+  },
+  "time_out": {
+    "$date": "2023-09-18T08:24:48.863Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Kaniz Fatima",
+  "mobile": "01730730357",
+  "from": "Burger king",
+  "image": "1695025487988pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Naim Hossin",
+    "emp_mobile": "01708132094",
+    "designation": "Executive",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-18T08:24:48.864Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-18T08:24:48.864Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650809eb6aa17b1e429ba314"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-18T08:27:23.151Z"
+  },
+  "time_out": {
+    "$date": "2023-09-18T08:27:23.151Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Kaniz Fatima",
+  "mobile": "01730730357",
+  "from": "Burger king",
+  "image": "1695025642303pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Aliwardy Khandkar",
+    "emp_mobile": "01713186978",
+    "designation": "Advisor",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-18T08:27:23.152Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-18T08:27:23.152Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650809eb6aa17b1e429ba315"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-09-18T08:27:23.236Z"
+  },
+  "time_out": {
+    "$date": "2023-09-18T08:27:23.236Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Kaniz Fatima",
+  "mobile": "01730730357",
+  "from": "Burger king",
+  "image": "1695025642583pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Aliwardy Khandkar",
+    "emp_mobile": "01713186978",
+    "designation": "Advisor",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-18T08:27:23.237Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-18T08:27:23.237Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65083e386aa17b1e429ba316"
+  },
+  "cardno": "2-650",
+  "time_in": {
+    "$date": "2023-09-18T12:10:32.650Z"
+  },
+  "time_out": {
+    "$date": "2023-09-18T12:10:32.650Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Asif",
+  "mobile": "01776019719",
+  "from": "B Trac",
+  "image": "1695039032083pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Naim Hossin",
+    "emp_mobile": "01708132094",
+    "designation": "Executive",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-18T12:10:32.651Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-18T12:10:32.651Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65096bdb6aa17b1e429ba317"
+  },
+  "cardno": "2521",
+  "time_in": {
+    "$date": "2023-09-19T09:37:31.313Z"
+  },
+  "time_out": {
+    "$date": "2023-09-19T09:37:31.313Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "MD. JAHID HASAN",
+  "mobile": "01708122167",
+  "from": "Gazipur",
+  "image": "1695116250689pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Safayet Abdullah",
+    "emp_mobile": "01713186922",
+    "designation": "Manager",
+    "department": "Project Management Office"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-19T09:37:31.320Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-19T09:37:31.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509980e6aa17b1e429ba318"
+  },
+  "cardno": "2-301",
+  "time_in": {
+    "$date": "2023-09-19T12:46:06.699Z"
+  },
+  "time_out": {
+    "$date": "2023-09-19T12:46:06.699Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "Mofizur Rahman",
+  "mobile": "01912716958",
+  "from": "B-trac",
+  "image": "1695127566338pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Naim Hossin",
+    "emp_mobile": "01708132094",
+    "designation": "Executive",
+    "department": "Implementation & Support"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-09-19T12:46:06.700Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-19T12:46:06.700Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651aa8f96aa17b1e429ba319"
+  },
+  "cardno": "002",
+  "time_in": {
+    "$date": "2023-10-02T11:26:49.863Z"
+  },
+  "time_out": {
+    "$date": "2023-10-02T11:26:49.863Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "sharmin",
+  "mobile": "01685375324",
+  "from": "Bangla trac",
+  "image": "1696246009673pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Golam Mustofa Ahad",
+    "emp_mobile": "01709647289",
+    "designation": "Assistant Manager",
+    "department": "Sales"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-10-02T11:26:49.869Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-02T11:26:49.869Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651e37a66aa17b1e429ba31a"
+  },
+  "cardno": "ffgg",
+  "time_in": {
+    "$date": "2023-10-05T04:12:22.755Z"
+  },
+  "time_out": {
+    "$date": "2023-10-05T04:12:22.755Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "edfty",
+  "mobile": "58556699998",
+  "from": "bdffg",
+  "image": "1696479141871pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Rokib Mahmud",
+    "emp_mobile": "01713461138",
+    "designation": "Chief Corporate and Regulatory Affairs Officer",
+    "department": "Corporate Affairs"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-10-05T04:12:22.761Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-05T04:12:22.761Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651e57db6aa17b1e429ba31b"
+  },
+  "cardno": "null",
+  "time_in": {
+    "$date": "2023-10-05T06:29:47.652Z"
+  },
+  "time_out": {
+    "$date": "2023-10-05T06:29:47.652Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "ulfath ahmed",
+  "mobile": "01776723109",
+  "from": "btsl",
+  "image": "1696487387255pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "M Jahangir Alam",
+    "emp_mobile": "01730311602",
+    "designation": "Group CEO",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2023-10-05T06:29:47.661Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-05T06:29:47.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "654a05736aa17b1e429ba31c"
+  },
+  "cardno": "s3333",
+  "time_in": {
+    "$date": "2023-11-07T09:37:55.080Z"
+  },
+  "time_out": {
+    "$date": "2023-11-07T09:37:55.080Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "erff",
+  "mobile": "01785375324",
+  "from": "ffffv",
+  "image": "1699349873749pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Repon Howlader",
+    "emp_mobile": "01782805290",
+    "designation": "Fork Lift Operator",
+    "department": "Mechanical Maintenance"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2023-11-07T09:37:55.087Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-07T09:37:55.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65928942fba19f235c21d629"
+  },
+  "cardno": "232",
+  "time_in": {
+    "$date": "2024-01-01T09:43:30.736Z"
+  },
+  "time_out": {
+    "$date": "2024-01-01T09:43:30.736Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "MISS LISA",
+  "mobile": "01685375323",
+  "from": "BTrac",
+  "image": "1704102210229pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md. Masum Hasan",
+    "emp_mobile": "01730324978",
+    "designation": "Deputy Manager",
+    "department": "Group Corporate Finance & Treasury"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-01T09:43:30.744Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-01T09:43:30.744Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6593de09fba19f235c21d62a"
+  },
+  "cardno": "233",
+  "time_in": {
+    "$date": "2024-01-02T09:57:29.410Z"
+  },
+  "time_out": {
+    "$date": "2024-01-02T09:57:29.410Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "sharmin",
+  "mobile": "01685375324",
+  "from": "Bangla trac",
+  "image": "1704189448443pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "M Jahangir Alam",
+    "emp_mobile": "01730311602",
+    "designation": "Group CEO",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-02T09:57:29.417Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-02T09:57:29.417Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a367a9fba19f235c21d62b"
+  },
+  "cardno": "test",
+  "time_in": {
+    "$date": "2024-01-14T04:48:41.626Z"
+  },
+  "time_out": {
+    "$date": "2024-01-14T04:48:41.626Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "asad",
+  "mobile": "01816123934",
+  "from": "mirpur",
+  "image": "1705207718188pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Mst. Sanjida Akter",
+    "emp_mobile": "01516154382",
+    "designation": "Team Member",
+    "department": "Restaurant Operation"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-14T04:48:41.633Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-14T04:48:41.633Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a37a40fba19f235c21d62c"
+  },
+  "cardno": "556",
+  "time_in": {
+    "$date": "2024-01-14T06:08:00.761Z"
+  },
+  "time_out": {
+    "$date": "2024-01-14T06:08:00.761Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "rashed",
+  "mobile": "01626044085",
+  "from": "banglatrac",
+  "image": "1705212480433pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Aliwardy Khandkar",
+    "emp_mobile": "01713186978",
+    "designation": "Advisor",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-14T06:08:00.763Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-14T06:08:00.763Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a382e7fba19f235c21d62d"
+  },
+  "cardno": "456",
+  "time_in": {
+    "$date": "2024-01-14T06:44:55.813Z"
+  },
+  "time_out": {
+    "$date": "2024-01-14T06:44:55.813Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "syed bishal",
+  "mobile": "01680346167",
+  "from": "mirpur",
+  "image": "1705214695298pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Md Ferdous Amin",
+    "emp_mobile": "01709632308",
+    "designation": "Senior Executive",
+    "department": "Administration"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-14T06:44:55.814Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-14T06:44:55.814Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a38383fba19f235c21d62e"
+  },
+  "cardno": "07",
+  "time_in": {
+    "$date": "2024-01-14T06:47:31.427Z"
+  },
+  "time_out": {
+    "$date": "2024-01-14T06:47:31.427Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "syed bishal",
+  "mobile": "01680346167",
+  "from": "mirpur",
+  "image": "1705214848406pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Mohammad Atiqur Rahman",
+    "emp_mobile": "01730311608",
+    "designation": "Manager",
+    "department": "Group Corporate Finance & Treasury"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-14T06:47:31.428Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-14T06:47:31.428Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a383f6fba19f235c21d62f"
+  },
+  "cardno": "55",
+  "time_in": {
+    "$date": "2024-01-14T06:49:26.614Z"
+  },
+  "time_out": {
+    "$date": "2024-01-14T06:49:26.614Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "syed bishal",
+  "mobile": "01680346167",
+  "from": "mirpur",
+  "image": "1705214965910pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Aliwardy Khandkar",
+    "emp_mobile": "01713186978",
+    "designation": "Advisor",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e747162df871d1d69cfb",
+    "purposename": "Official Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-14T06:49:26.615Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-14T06:49:26.615Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a385f8fba19f235c21d630"
+  },
+  "cardno": "jinnji",
+  "time_in": {
+    "$date": "2024-01-14T06:58:00.681Z"
+  },
+  "time_out": {
+    "$date": "2024-01-14T06:58:00.681Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "titumir",
+  "mobile": "01730311611",
+  "from": "yy",
+  "image": "1705215480027pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Aan Noor Rahman",
+    "emp_mobile": "01730311611",
+    "designation": "Engineer",
+    "department": "Embedded Systems"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-14T06:58:00.682Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-14T06:58:00.682Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a3865dfba19f235c21d631"
+  },
+  "cardno": "fdgdfgtdgdf",
+  "time_in": {
+    "$date": "2024-01-14T06:59:41.528Z"
+  },
+  "time_out": {
+    "$date": "2024-01-14T06:59:41.528Z"
+  },
+  "duration": "0",
+  "status": "1",
+  "fullname": "titumir",
+  "mobile": "01730311611",
+  "from": "yy",
+  "image": "1705215579070pic_btracsolutions.png",
+  "emp_info": {
+    "emp_name": "Aliwardy Khandkar",
+    "emp_mobile": "01713186978",
+    "designation": "Advisor",
+    "department": "General"
+  },
+  "created_by": {
+    "_id": "606b5c1281c07257d0f42521",
+    "name": "Juwel"
+  },
+  "purpose": {
+    "_id": "61d3e751162df871d1d69cfc",
+    "purposename": "Personal Visit"
+  },
+  "createdAt": {
+    "$date": "2024-01-14T06:59:41.529Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-14T06:59:41.529Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "61d3e747162df871d1d69cfb"
+  },
+  "status": "1",
+  "purposename": "Official Visit",
+  "createdAt": {
+    "$date": "2022-01-04T06:20:55.966Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-04T06:20:55.966Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61d3e751162df871d1d69cfc"
+  },
+  "status": "1",
+  "purposename": "Personal Visit",
+  "createdAt": {
+    "$date": "2022-01-04T06:21:05.322Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-04T06:21:05.322Z"
+  },
+  "__v": 0
+}]

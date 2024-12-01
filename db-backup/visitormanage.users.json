@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "606420e96484940f4a6bca48"
+  },
+  "role": 0,
+  "cart": [],
+  "name": "Bellal",
+  "email": "bellal@gmail.com",
+  "password": "$2a$10$cxGcdYO8IaTjvo0HbWpG8uBA/02MuWtw9kRR41L/QafJl8HzSZyxG",
+  "createdAt": {
+    "$date": "2021-03-31T07:12:41.271Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-31T07:12:41.271Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "606b5c1281c07257d0f42521"
+  },
+  "role": 0,
+  "cart": [],
+  "name": "Juwel",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$pbrS.Ql5LoJ4dwmeGc6G9OpEnnEWeHFKZ5Tpk27b/sYCC7l4ASnWG",
+  "createdAt": {
+    "$date": "2021-04-05T18:50:58.118Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-05T18:50:58.118Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "608a8469a83126032cd2f72b"
+  },
+  "role": 0,
+  "cart": [],
+  "name": "Masud Rana",
+  "email": "rana@gmail.com",
+  "password": "$2a$10$hC3AOzfqpPviEPk3w/EiQ.RmBAY19kwiJ/VCKepgF3f8F2JakyJxO",
+  "createdAt": {
+    "$date": "2021-04-29T10:03:21.917Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-29T10:03:21.917Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61c0a9010b78aa095c9b36d5"
+  },
+  "role": 0,
+  "cart": [],
+  "name": "juwel",
+  "email": "jewel.aust1995@gmail.com",
+  "password": "$2a$10$D5HW5BXXw/dBwnXEn6t6DO/eTufZOPnqDzZ5ffcW3c/ojtICKWieG",
+  "createdAt": {
+    "$date": "2021-12-20T16:02:09.791Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-20T16:02:09.791Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61d4054c162df871d1d69cfe"
+  },
+  "role": 0,
+  "cart": [],
+  "name": "Juwel",
+  "email": "admin",
+  "password": "$2a$10$3VGQH72.ZUdQTOefjFCvpuB423r7bqWHnAWj3dR7Ck3XXLqFhO9Dy",
+  "createdAt": {
+    "$date": "2022-01-04T08:29:00.171Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-04T08:29:00.171Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,162 @@
+extends ../common/layout 
+
+block content
+ <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+ <div class="d-flex flex-column-fluid">
+  <div class="container">
+
+    <div class="card card-custom">
+      <div class="card-header" style="background-color: #FFFFFF">
+       <h3 class="card-title">
+        <i class="la la-report"></i>&nbsp;&nbsp;General Report
+      </h3>
+      <div class="card-toolbar">
+        <!--begin::Button-->
+        <a href="#" onclick="printDiv('saletable')" class="btn btn-success font-weight-bolder">
+          <i class="la la-print"></i>Print</a>
+          <!--end::Button-->
+        </div>
+      </div>
+      <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+      <div class="card-body" style="padding: 1rem 2.25rem !important;">
+            <div class="form-group row">
+                <label for="example-tel-input" class="col-4 col-form-label">Select Option</label>
+                <div class="col-8">
+                    <select class="form-control select2" id="kt_select2_1" name="status" style="width: 100%;">
+                        <option  value="" disabled selected></option>
+                        <option  value="1">Today Visitor Report</option>
+                        <option  value="2">This Weeks Visitor Report</option>
+                        <option  value="3">This Months Visitor Report</option>
+                    </select>
+                </div>
+            </div>
+      </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div id="saletable">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-body text-center" style="padding: 1rem 2.25rem !important;">
+              <div class="text-center">
+                <h3 id="reportType"> General Reports </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-body" style="padding: 0rem 2.25rem !important;">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead style="background-color: #f4f5f7;">
+                    <th>Card No.</th>
+                    <th>Visitor Name</th>
+                    <th>Visitor Mobile</th>
+                    <th>Employee Name</th>
+                    <th>TimeIn</th>
+                    <th>TimeOut</th>
+                    <th>duration</th>
+                  </thead>
+                  <tbody id="data-holder">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ </div>
+
+block extra_script
+ 
+ script.
+   $('#kt_select2_1').select2({
+    placeholder: "Select option"
+  });
+ script.
+  function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    document.body.style.marginTop="0px";
+    window.print();
+    document.body.innerHTML = originalContents;
+  }
+ script.
+  $(document).ready(function(){
+    $(document).on('change','#kt_select2_1',function(){
+      var reportType = $(this).val();
+      
+      if(reportType == 1){
+          $('#reportType').html('Todays Visitors List');
+      }
+      else if(reportType == 2){
+          $('#reportType').html('This Weeks Visitors List');
+      }
+      else if(reportType == 3){
+          $('#reportType').html('This Months Visitors List');
+      }
+      else
+          $('#reportType').html('General Report');
+      
+      var url = "/report/general-report-ajax";
+      $.ajax({
+        url: url,
+        method:'POST',
+        dataType : 'json',
+        data: {
+            type : reportType
+        },
+
+        success:function(data){ 
+        if(data.length > 0){
+          $("#data-holder").find(".data-item").remove();
+          var log = "";
+          $.each(data,function(index,item){
+            let timein_date = new Date(data[index]['time_in']).toLocaleDateString('en-ca');
+            let timein_time = new Date(data[index]['time_in']).toLocaleTimeString();
+
+            let timeout_date = new Date(data[index]['time_out']).toLocaleDateString('en-ca');
+            let timeout_time = new Date(data[index]['time_out']).toLocaleTimeString();
+            log += "<tr class='data-item' style='font-size: 12px;'>"
+            log += "<td>"+data[index].cardno+"</td>"
+            log += "<td>"+data[index].fullname+"</td>"
+            log += "<td>"+data[index].mobile+"</td>"
+            log += "<td>"+data[index].emp_info.emp_name+"</td>"
+            log += "<td>"+timein_date+' '+timein_time+"</td>"
+            log += "<td>"+timeout_date+' '+timeout_time+"</td>"
+            log += "<td>"+data[index].duration+"</td>"
+            //- log += "<td>"+data[index].Resolved_Time+"</td>"
+            //- log += "<td>"+data[index].Processing_Time+"</td>"
+            log += "</tr>";
+          });
+          $("#data-holder").append(log);
+        }
+        else
+        {
+          swal.fire({
+                  title: 'Info',
+                  text: 'No Data Found!',
+                  icon: "info",
+                  confirmButtonText: 'OK'
+                }).then(() => {
+                  window.location.href = "/report/general-report";
+                });
+        }
+      },
+      error:function(error){
+        console.log(error);
+      }
+     })
+    })
+   })
+
+
