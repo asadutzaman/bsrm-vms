@@ -44,6 +44,7 @@ app.use('/visitor', require('./routes/visitorRouter'))
 app.use('/employee', require('./routes/employeeRouter'))
 app.use('/report', require('./routes/reportRouter'))
 app.use('/purpose', require('./routes/purposeRouter'))
+app.use('/schedule', require('./routes/preScheduleVisitorRouter'))
 
 console.log('Routing Done...');
 
