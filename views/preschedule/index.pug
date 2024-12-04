@@ -76,30 +76,39 @@ block content
         <!--end::Card-->
 
         <!-- Drawer -->
-        div#drawerForm.drawer
-          div.drawer-content
-            div.drawer-header
-              h5 Add Pre-Schedule Visitor
-              button#closeDrawerBtn.close-btn &times;
-            div.drawer-body
-              form#preScheduleForm
-                div.form-group
-                  label(for="fullname") Full Name
-                  input#fullname.form-control(type="text" placeholder="Enter Full Name" required)
-                div.form-group
-                  label(for="mobile") Mobile
-                  input#mobile.form-control(type="text" placeholder="Enter Mobile" required)
-                div.form-group
-                  label(for="from") From
-                  input#from.form-control(type="text" placeholder="Enter Source")
-                div.form-group
-                  label(for="purpose") Purpose
-                  input#purpose.form-control(type="text" placeholder="Enter Purpose")
-                div.form-group
-                  label(for="pre_schedule_date") Date Scheduled
-                  input#pre_schedule_date.form-control(type="date" required)
-                button#submitFormBtn.btn.btn-primary.mt-3(type="submit") Submit
-  </div>
+        <div class="drawer">
+          <div class="drawer-header">
+            <h5>Add New Visitor</h5>
+            <button class="close-btn" id="closeDrawerBtn">&times;</button>
+          </div>
+          <div class="drawer-content">
+            <form id="drawerForm">
+              <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" class="form-control" placeholder="Enter Full Name">
+              </div>
+              <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile" class="form-control" placeholder="Enter Mobile">
+              </div>
+              <div class="form-group">
+                <label for="form">From</label>
+                <input type="text" id="form" class="form-control" placeholder="Enter From">
+              </div>
+              <div class="form-group">
+                <label for="purpose">Purpose</label>
+                <input type="text" id="purpose" class="form-control" placeholder="Enter Purpose">
+              </div>
+              <div class="form-group">
+                <label for="pre_schedule_date">Date Scheduled</label>
+                <input type="date" id="pre_schedule_date" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
@@ -108,13 +117,23 @@ block content
       const tableBody = document.querySelector("#visitorTable tbody");
       const searchInput = document.querySelector("#searchInput");
       const paginationNav = document.querySelector("#pagination");
-      const drawer = document.getElementById("drawerForm");
-      const openDrawerBtn = document.getElementById("openDrawerBtn");
-      const closeDrawerBtn = document.getElementById("closeDrawerBtn");
+      const drawer = document.querySelector(".drawer");
+      const form = document.getElementById("drawerForm");
+      const openDrawerButton = document.getElementById("openDrawerBtn");
+      const closeDrawerButton = document.getElementById("closeDrawerBtn");
 
-      let currentPage = 1;
-      let searchQuery = "";
+      // Open Drawer
+      openDrawerButton.addEventListener("click", () => {
+        drawer.classList.add("open");
+      });
 
+      // Close Drawer
+      closeDrawerButton.addEventListener("click", () => {
+        drawer.classList.remove("open");
+        form.reset(); // Clear the form when closing the drawer
+      });
+
+      // Fetch and Populate Visitors
       const fetchVisitors = (page = 1, search = "") => {
         axios.get(`/schedule/pre-schedule-visitor-ajax-datatable?page=${page}&search=${search}`).then((response) => {
           const { data, pages } = response.data;
@@ -145,8 +164,8 @@ block content
 
           document.querySelectorAll(".page-btn").forEach((button) => {
             button.addEventListener("click", () => {
-              currentPage = button.getAttribute("data-page");
-              fetchVisitors(currentPage, searchQuery);
+              const page = button.getAttribute("data-page");
+              fetchVisitors(page, search);
             });
           });
         });
@@ -157,35 +176,29 @@ block content
 
       // Search functionality
       searchInput.addEventListener("input", (e) => {
-        searchQuery = e.target.value;
+        const searchQuery = e.target.value;
         fetchVisitors(1, searchQuery);
       });
 
-      // Drawer toggle
-      openDrawerBtn.addEventListener("click", () => {
-        drawer.style.width = "400px";
-      });
-      closeDrawerBtn.addEventListener("click", () => {
-        drawer.style.width = "0";
-      });
-
       // Submit Drawer Form
-      document.getElementById("preScheduleForm").addEventListener("submit", (e) => {
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const formData = {
           fullname: document.getElementById("fullname").value,
           mobile: document.getElementById("mobile").value,
-          from: document.getElementById("from").value,
+          from: document.getElementById("form").value,
           purpose: document.getElementById("purpose").value,
           pre_schedule_date: document.getElementById("pre_schedule_date").value,
         };
 
-        axios.post("/schedule/save", formData)
+        axios
+          .post("/schedule/save", formData)
           .then(() => {
             alert("Visitor added successfully!");
-            drawer.style.width = "0";
-            fetchVisitors(); // Refresh table
+            drawer.classList.remove("open");
+            form.reset(); // Clear form fields after submission
+            fetchVisitors(); // Refresh the table
           })
           .catch((err) => {
             console.error(err);
@@ -199,33 +212,15 @@ block content
       position: fixed;
       top: 0;
       right: 0;
-      width: 0;
       height: 100%;
-      overflow-x: hidden;
-      transition: 0.3s;
-      background-color: #f8f9fa;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-    }
-    .drawer-content {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .drawer-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    .drawer-body {
-      flex-grow: 1;
+      width: 400px;
+      background-color: #fff;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
       overflow-y: auto;
+      z-index: 1050;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
     }
-    .close-btn {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
+    .drawer.open {
+      transform: translateX(0);
     }
