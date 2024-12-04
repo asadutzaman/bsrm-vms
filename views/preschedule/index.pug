@@ -213,14 +213,87 @@ block content
       top: 0;
       right: 0;
       height: 100%;
-      width: 400px;
+      width: 400px; /* Ensure the width is consistent */
       background-color: #fff;
       box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
       overflow-y: auto;
-      z-index: 1050;
-      transform: translateX(100%);
+      z-index: 1050; /* Make sure it appears above other content */
+      transform: translateX(100%); /* Position the drawer off-screen */
       transition: transform 0.3s ease-in-out;
     }
     .drawer.open {
-      transform: translateX(0);
+      transform: translateX(0); /* Bring the drawer into view */
+    }
+    .drawer-header {
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    
+    .drawer-header h5 {
+      font-size: 1.25rem;
+      margin: 0;
+      color: #343a40;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .drawer-content {
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .drawer-content label {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .drawer-content .form-control {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    .drawer-content .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    }
+
+    #submitBtn {
+      background: #007bff;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #submitBtn:hover {
+      background: #0056b3;
     }
