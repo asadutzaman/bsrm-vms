@@ -2,123 +2,230 @@ extends ../common/layout
 
 block content
   <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-  <div class="d-flex flex-column-fluid">
-    <!--begin::Container-->
-    <div class="container">
-      <!--begin::Notice-->
-
-      <div class="alert alert-custom alert-white alert-shadow gutter-b alert-text" role="alert">
-        <div class="alert-icon">
-          <span class="svg-icon svg-icon-primary svg-icon-xl">
-            <!--begin::Svg Icon | path:assets/media/svg/icons/Tools/Compass.svg-->
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <rect x="0" y="0" width="24" height="24" />
-                <path d="M7.07744993,12.3040451 C7.72444571,13.0716094 8.54044565,13.6920474 9.46808594,14.1079953 L5,23 L4.5,18 L7.07744993,12.3040451 Z M14.5865511,14.2597864 C15.5319561,13.9019016 16.375416,13.3366121 17.0614026,12.6194459 L19.5,18 L19,23 L14.5865511,14.2597864 Z M12,3.55271368e-14 C12.8284271,3.53749572e-14 13.5,0.671572875 13.5,1.5 L13.5,4 L10.5,4 L10.5,1.5 C10.5,0.671572875 11.1715729,3.56793164e-14 12,3.55271368e-14 Z" fill="#000000" opacity="0.3" />
-                <path d="M12,10 C13.1045695,10 14,9.1045695 14,8 C14,6.8954305 13.1045695,6 12,6 C10.8954305,6 10,6.8954305 10,8 C10,9.1045695 10.8954305,10 12,10 Z M12,13 C9.23857625,13 7,10.7614237 7,8 C7,5.23857625 9.23857625,3 12,3 C14.7614237,3 17,5.23857625 17,8 C17,10.7614237 14.7614237,13 12,13 Z" fill="#000000" fill-rule="nonzero" />
-              </g>
-            </svg>
-          </span>
-        </div>
-        <div class="alert-text">
-          <div class="d-flex align-items-baseline mr-5">
-            <!--begin::Page Title-->
-            <h2 class="subheader-title text-dark font-weight-bold my-2 mr-3">Pre Schedule Visitor Management</h2>
-            <!--end::Page Title-->
-            <!--begin::Breadcrumb-->
-            <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold my-2 p-0">
-              <li class="breadcrumb-item">
-                <a href="" class="text-muted">Manage</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="" class="text-muted">List</a>
-              </li>
-
-            </ul>
-            <!--end::Breadcrumb-->
-
-        </div>
-      </div>
-    </div>
-    <!--end::Notice-->
-    if message != ''
-      <div class="alert alert-success" role="alert">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>#{message}</strong>
-      </div>
-    <!--begin::Card-->
-    <div class="card card-custom">
-      <div class="card-header" style="background:rgb(240,240,240)">
-        <div class="card-title">
-          <span class="card-icon">
-            <i class="fa fa-cog"></i>
-          </span>
-          <h3 class="card-label">#{title}</h3>
-        </div>
-        <div class="card-toolbar">
-
-          <!--begin::Button-->
-          <a href="/schedule/create" class="btn btn-success font-weight-bolder newRecord">
-            <i class="la la-plus"></i>Add A preschedule</a>
-            <!--end::Button-->
+    <div class="d-flex flex-column-fluid">
+      <!--begin::Container-->
+      <div class="container">
+        <!--begin::Notice-->
+        <div class="alert alert-custom alert-white alert-shadow gutter-b alert-text" role="alert">
+          <div class="alert-icon">
+            <span class="svg-icon svg-icon-primary svg-icon-xl">
+              <!-- SVG Icon -->
+            </span>
+          </div>
+          <div class="alert-text">
+            <div class="d-flex align-items-baseline mr-5">
+              <h2 class="subheader-title text-dark font-weight-bold my-2 mr-3">Pre Schedule Visitor Management</h2>
+              <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold my-2 p-0">
+                <li class="breadcrumb-item"><a href="" class="text-muted">Manage</a></li>
+                <li class="breadcrumb-item"><a href="" class="text-muted">List</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <!--begin: Datatable-->
-          <table class="table table-bordered table-hover table-checkable" id="kt_datatable">
-            <thead>
-              <tr style="background-color: #ebecf0">
-                <th>User Id</th>
-                <th>User Name</th>
-                <th>Email</th>
-                <th>Status</th>
-                <th>Role</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-          </table>
-          <!--end: Datatable-->
+        <!--end::Notice-->
+
+        if message != ''
+          <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>#{message}</strong>
+          </div>
+
+        <!--begin::Card-->
+        <div class="card card-custom">
+          <div class="card-header" style="background:rgb(240,240,240)">
+            <div class="card-title">
+              <span class="card-icon">
+                <i class="fa fa-cog"></i>
+              </span>
+              <h3 class="card-label">#{title}</h3>
+            </div>
+            <div class="card-toolbar">
+              <button id="openDrawerBtn" class="btn btn-success font-weight-bolder">
+                <i class="la la-plus"></i>Add A Preschedule
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- Search Bar -->
+            <div class="mb-4">
+              input#searchInput.form-control(type="text" placeholder="Search by Full Name...")
+            </div>
+
+            <!-- Data Table -->
+            <table id="visitorTable" class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Mobile</th>
+                  <th>From</th>
+                  <th>Card Number</th>
+                  <th>Purpose</th>
+                  <th>Status</th>
+                  <th>Date Scheduled</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center mt-4">
+              <nav id="pagination"></nav>
+            </div>
+          </div>
         </div>
-      </div>
-      <!--end::Card-->
-    </div>
-    <!--end::Container-->
+        <!--end::Card-->
+
+        <!-- Drawer -->
+        div#drawerForm.drawer
+          div.drawer-content
+            div.drawer-header
+              h5 Add Pre-Schedule Visitor
+              button#closeDrawerBtn.close-btn &times;
+            div.drawer-body
+              form#preScheduleForm
+                div.form-group
+                  label(for="fullname") Full Name
+                  input#fullname.form-control(type="text" placeholder="Enter Full Name" required)
+                div.form-group
+                  label(for="mobile") Mobile
+                  input#mobile.form-control(type="text" placeholder="Enter Mobile" required)
+                div.form-group
+                  label(for="from") From
+                  input#from.form-control(type="text" placeholder="Enter Source")
+                div.form-group
+                  label(for="purpose") Purpose
+                  input#purpose.form-control(type="text" placeholder="Enter Purpose")
+                div.form-group
+                  label(for="pre_schedule_date") Date Scheduled
+                  input#pre_schedule_date.form-control(type="date" required)
+                button#submitFormBtn.btn.btn-primary.mt-3(type="submit") Submit
   </div>
   </div>
 
-  block extra_script
+  script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+  script.
+    document.addEventListener("DOMContentLoaded", () => {
+      const tableBody = document.querySelector("#visitorTable tbody");
+      const searchInput = document.querySelector("#searchInput");
+      const paginationNav = document.querySelector("#pagination");
+      const drawer = document.getElementById("drawerForm");
+      const openDrawerBtn = document.getElementById("openDrawerBtn");
+      const closeDrawerBtn = document.getElementById("closeDrawerBtn");
 
-    script.
-      KTDatatablesDataSourceAjaxServer = function() {
-        var initTable1 = function() {
-        base_url = '/user-ajax-datatable';
-          $('#kt_datatable').DataTable({
-            "responsive": true,
-            "paging": true,
-            "pageLength": 10,
-            "searchDelay": 500,
-            "processing": true,
-            "serverSide": true,
-            "ajax": {
-              "url" : base_url,
-              'type': 'GET',
-            },
-            columns: [
-              {"data": '_id'},
-              {"data": 'name'},
-              {"data": 'email'},
-              {"data": 'status'},
-              {"data": 'role'},
-              {"data": 'action'},
-            ]
+      let currentPage = 1;
+      let searchQuery = "";
+
+      const fetchVisitors = (page = 1, search = "") => {
+        axios.get(`/schedule/pre-schedule-visitor-ajax-datatable?page=${page}&search=${search}`).then((response) => {
+          const { data, pages } = response.data;
+          tableBody.innerHTML = "";
+
+          // Populate table
+          data.forEach((visitor) => {
+            tableBody.innerHTML += `
+              <tr>
+                <td>${visitor.fullname}</td>
+                <td>${visitor.mobile}</td>
+                <td>${visitor.from || "N/A"}</td>
+                <td>${visitor.cardno || "N/A"}</td>
+                <td>${visitor.purpose || "N/A"}</td>
+                <td>${visitor.status == 1 ? "Active" : "Inactive"}</td>
+                <td>${new Date(visitor.pre_schedule_date).toLocaleDateString()}</td>
+              </tr>
+            `;
           });
-        };
-        return {
-          init: function() {
-            initTable1();
-          },
-        };
-      }();
-      $(document).ready(function() {
-        KTDatatablesDataSourceAjaxServer.init();
+
+          // Setup pagination
+          paginationNav.innerHTML = "";
+          for (let i = 1; i <= pages; i++) {
+            paginationNav.innerHTML += `
+              <button class="btn btn-outline-primary me-2 page-btn" data-page="${i}">${i}</button>
+            `;
+          }
+
+          document.querySelectorAll(".page-btn").forEach((button) => {
+            button.addEventListener("click", () => {
+              currentPage = button.getAttribute("data-page");
+              fetchVisitors(currentPage, searchQuery);
+            });
+          });
+        });
+      };
+
+      // Initial fetch
+      fetchVisitors();
+
+      // Search functionality
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        fetchVisitors(1, searchQuery);
       });
+
+      // Drawer toggle
+      openDrawerBtn.addEventListener("click", () => {
+        drawer.style.width = "400px";
+      });
+      closeDrawerBtn.addEventListener("click", () => {
+        drawer.style.width = "0";
+      });
+
+      // Submit Drawer Form
+      document.getElementById("preScheduleForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = {
+          fullname: document.getElementById("fullname").value,
+          mobile: document.getElementById("mobile").value,
+          from: document.getElementById("from").value,
+          purpose: document.getElementById("purpose").value,
+          pre_schedule_date: document.getElementById("pre_schedule_date").value,
+        };
+
+        axios.post("/schedule/save", formData)
+          .then(() => {
+            alert("Visitor added successfully!");
+            drawer.style.width = "0";
+            fetchVisitors(); // Refresh table
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("An error occurred while adding the visitor.");
+          });
+      });
+    });
+
+  style.
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 100%;
+      overflow-x: hidden;
+      transition: 0.3s;
+      background-color: #f8f9fa;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+    .drawer-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .drawer-body {
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+    }

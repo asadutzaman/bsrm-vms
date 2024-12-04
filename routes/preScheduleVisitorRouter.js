@@ -14,6 +14,7 @@ const authBackend = require('../middleware/authBackend');
 router.get('/', authBackend, preScheduleVisitorCtrl.index);
 router.get('/create', authBackend, preScheduleVisitorCtrl.create); 
 router.post('/save', authBackend, preScheduleVisitorCtrl.save);
+router.get('/pre-schedule-visitor-ajax-datatable', authBackend, preScheduleVisitorCtrl.preVisitorAjaxDatatable);
 // router.get('/user/create', authBackend, userCtrl.create);
 // router.get('/dashboard', authBackend, userCtrl.dashboard);
 
@@ -21,7 +22,6 @@ router.post('/save', authBackend, preScheduleVisitorCtrl.save);
 
 // router.get('/user', authBackend, userCtrl.index);
 
-// router.get('/user-ajax-datatable', authBackend, userCtrl.userAjaxDatatable);
 
 
 module.exports = router;

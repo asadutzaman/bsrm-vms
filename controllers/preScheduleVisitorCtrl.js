@@ -1,4 +1,4 @@
-const Users = require('../models/userModel')
+// const PreScheduleVisitors = require('../models/userModel')
     //const bcrypt = require('bcrypt')
 const bcrypt = require('bcrypt-nodejs')
 const jwt = require('jsonwebtoken')
@@ -17,7 +17,7 @@ const preScheduleVisitorCtrl = {
                 return res.redirect('/user/create');
             }
 
-            const user = await Users.findOne({ email })
+            const user = await PreScheduleVisitors.findOne({ email })
             if (user) {
                 req.flash('msg', 'User already exists!');
                 return res.redirect('/user/create');
@@ -31,7 +31,7 @@ const preScheduleVisitorCtrl = {
             // Password Encryption
             const passwordHash = bcrypt.hashSync(password);
 
-            const newUser = new Users({
+            const newUser = new PreScheduleVisitors({
                 name,
                 email,
                 password: passwordHash
@@ -82,61 +82,29 @@ const preScheduleVisitorCtrl = {
     create: (req, res) => {
         res.render('preschedule/create', { title: 'Create a preschdule visitor', message: req.flash('msg') });
     },
-    userAjaxDatatable: async(req, res) => {
-        var searchStr = req.query.search['value'];
-        var recordsTotal = await Users.countDocuments({});
-        var recordsFiltered;
+    preVisitorAjaxDatatable: async(req, res) => {
+        const { page = 1, limit = 10, search = '' } = req.query;
+        const query = search
+            ? { fullname: { $regex: search, $options: 'i' } } // Case-insensitive search
+            : {};
 
-        if (searchStr) {
-            var regex = new RegExp(searchStr, "i");
-            searchStr = { $or: [{ 'name': regex }, { 'email': regex }] };
-            var users = await Users.find(searchStr, '_id name email role');
-            recordsFiltered = await Users.countDocuments(searchStr);
-        } else {
-            searchStr = {};
-            var users = await Users.find({}).limit(Number(req.query.length)).skip(Number(req.query.start));
-            recordsFiltered = recordsTotal;
+        try {
+            const visitors = await PreScheduleVisitors.find(query)
+                .skip((page - 1) * limit)
+                .limit(parseInt(limit))
+                .sort({ createdAt: -1 }); // Newest first
+
+            const total = await PreScheduleVisitors.countDocuments(query);
+
+            res.json({
+                data: visitors,
+                total,
+                page: parseInt(page),
+                pages: Math.ceil(total / limit),
+            });
+        } catch (err) {
+            res.status(500).json({ error: err.message });
         }
-
-        var data = [];
-        var nestedData = {};
-        var role;
-        if (users) {
-            users.map((user, i) => {
-
-                var view = '';
-                view += "<a href='#' data-id='" + user['_id'] + "' class='btn btn-xs btn-light-danger btn-icon delete'>";
-                view += "<i class='fa fa-eye'></i>";
-                view += "</a>";
-
-                const status = "<span style='font-weight:bold' class='label label-lg label-light-danger label-inline'>Active</span>";
-
-                if (user['role'] === 1) {
-                    role = "<span>Super admin</span>"
-                } else {
-                    role = "<span>Admin</span>"
-                }
-
-                nestedData = {
-                    _id: user['_id'],
-                    name: user['name'],
-                    email: user['email'],
-                    status: status,
-                    role: role,
-                    action: view
-                };
-
-                data.push(nestedData);
-            })
-        }
-
-        var mytable = JSON.stringify({
-            "draw": req.query.draw,
-            "recordsFiltered": recordsFiltered,
-            "recordsTotal": recordsTotal,
-            "data": data
-        });
-        res.send(mytable);
     },
     save: async(req, res) => {
         try {
