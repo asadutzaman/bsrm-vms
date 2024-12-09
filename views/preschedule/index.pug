@@ -84,6 +84,13 @@ block content
           <div class="drawer-content">
             <form id="drawerForm">
               <div class="form-group">
+                <label for="employee">Select Employee</label>
+                <select id="employee" class="form-control">
+                  <option value="" disabled selected>Select Employee</option>
+                  <!-- Options will be populated dynamically -->
+                </select>
+              </div>
+              <div class="form-group">
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" class="form-control" placeholder="Enter Full Name">
               </div>
@@ -113,6 +120,31 @@ block content
 
   script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
   script.
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const employeeDropdown = document.getElementById("employee");
+
+        axios
+          .get("/schedule/employees")
+          .then((response) => {
+            const employees = response.data.employeeDetails;
+
+            // Clear existing options in the dropdown (optional)
+            employeeDropdown.innerHTML = '<option value="" disabled selected>Select Employee</option>';
+
+            // Populate the dropdown
+            employees.forEach((employee) => {
+              const option = document.createElement("option");
+              option.value = employee.emp_id; // Use emp_id as the value
+              option.textContent = `${employee.name} (${employee.designation || "N/A"})`;
+              employeeDropdown.appendChild(option);
+            });
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("Failed to load employee data.");
+          });
+    });
     document.addEventListener("DOMContentLoaded", () => {
       const tableBody = document.querySelector("#visitorTable tbody");
       const searchInput = document.querySelector("#searchInput");
@@ -180,6 +212,9 @@ block content
         fetchVisitors(1, searchQuery);
       });
 
+      
+
+
       // Submit Drawer Form
       form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -190,6 +225,7 @@ block content
           from: document.getElementById("form").value,
           purpose: document.getElementById("purpose").value,
           pre_schedule_date: document.getElementById("pre_schedule_date").value,
+          employee_id: document.getElementById("employee").value, // Include employee ID
         };
 
         axios
@@ -233,7 +269,7 @@ block content
     }
 
 
-    
+
     .drawer-header h5 {
       font-size: 1.25rem;
       margin: 0;

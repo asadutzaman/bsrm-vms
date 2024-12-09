@@ -42,18 +42,6 @@ const preScheduleVisitorCtrl = {
             req.flash('msg', 'User added successfully!');
             return res.redirect('/user');
 
-            // Then create jsonwebtoken to authentication
-            // const accesstoken = createAccessToken({ id: newUser._id })
-            // const refreshtoken = createRefreshToken({ id: newUser._id })
-
-            // res.cookie('refreshtoken', refreshtoken, {
-            //     httpOnly: true,
-            //     path: '/api/refresh_token',
-            //     maxAge: 7 * 24 * 60 * 60 * 1000 // 7d
-            // })
-
-            // res.json({ accesstoken })
-
         } catch (err) {
             return res.status(500).json({ msg: err.message })
         }
@@ -68,14 +56,16 @@ const preScheduleVisitorCtrl = {
             return res.status(500).json({ msg: err.message, status: false })
         }
     },
-    getEmployee: async(req, res) => {
+    getEmployees: async (req, res) => {
         try {
-            const employeeDetails = await Employees.find({ status: 1 });
-            res.json({ employeeDetails, status: true });
+          const employeeDetails = await Employees.find({ status: 1 }).select(
+            "emp_id name designation"
+          ); // Select only relevant fields
+          res.json({ employeeDetails, status: true });
         } catch (err) {
-            return res.status(500).json({ msg: err.message, status: false })
+          res.status(500).json({ msg: err.message, status: false });
         }
-    },
+    },      
     index: (req, res) => {
         res.render('preschedule/index', { title: 'Pre schedule visitor List', message: req.flash('msg') });
     },
@@ -106,22 +96,23 @@ const preScheduleVisitorCtrl = {
             res.status(500).json({ error: err.message });
         }
     },
-    save: async(req, res) => {
+    save: async (req, res) => {
         try {
-            const { fullname, mobile, pre_schedule_date, reason } = req.body;
-            const visitorInfo = new PreScheduleVisitors({
-                fullname,
-                mobile,
-                pre_schedule_date,
-                reason,
-            });
-            await visitorInfo.save();
-            req.flash('msg', 'Visitor added successfully!');
-            return res.redirect('/schedule');
+          const { fullname, mobile, pre_schedule_date, reason, employee_id } = req.body;
+          const visitorInfo = new PreScheduleVisitors({
+            fullname,
+            mobile,
+            pre_schedule_date,
+            reason,
+            employee_id, // Save employee ID
+          });
+          await visitorInfo.save();
+          req.flash("msg", "Visitor added successfully!");
+          return res.redirect("/schedule");
         } catch (err) {
-            return res.status(500).json({ msg: err.message })
+          return res.status(500).json({ msg: err.message });
         }
-    },
+    },      
 }
 
 module.exports = preScheduleVisitorCtrl

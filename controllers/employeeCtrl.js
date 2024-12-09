@@ -121,7 +121,7 @@ const employeeCtrl = {
     },
     store: async (req, res) => {
         try {
-            const { name, mobile, email, designation, department, company, joining } = req.body;
+            const { emp_id, name, mobile, email, designation, department, company, joining } = req.body;
     
             if (!name || !mobile || !designation || !emp_id) {
                 req.flash('msg', 'Fill up all the required fields!');
@@ -135,6 +135,7 @@ const employeeCtrl = {
             }
     
             const empData = new Employees({
+                emp_id,
                 name,
                 mobile,
                 email,

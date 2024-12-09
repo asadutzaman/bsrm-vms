@@ -15,6 +15,7 @@ router.get('/', authBackend, preScheduleVisitorCtrl.index);
 router.get('/create', authBackend, preScheduleVisitorCtrl.create); 
 router.post('/save', authBackend, preScheduleVisitorCtrl.save);
 router.get('/pre-schedule-visitor-ajax-datatable', authBackend, preScheduleVisitorCtrl.preVisitorAjaxDatatable);
+router.get("/employees", preScheduleVisitorCtrl.getEmployees);
 // router.get('/user/create', authBackend, userCtrl.create);
 // router.get('/dashboard', authBackend, userCtrl.dashboard);
 
