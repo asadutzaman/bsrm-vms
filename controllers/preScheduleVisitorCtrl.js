@@ -6,6 +6,21 @@ const { body, validationResult } = require('express-validator');
 const VisitorInfo = require('../models/visitorInfoModel');
 const Employees = require('../models/employeeModel');
 const PreScheduleVisitors = require('../models/preScheduleVisitorModel');
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
+    secure: false,
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+        ciphers: 'SSLv3',
+    },
+});
+
 
 const preScheduleVisitorCtrl = {
     register: async(req, res) => {
@@ -117,7 +132,30 @@ const preScheduleVisitorCtrl = {
     
             // Save visitor information
             await visitorInfo.save();
-            req.flash("msg", "Visitor added successfully!");
+    
+            // Prepare email details
+            const mailOptions = {
+                from: '"VMS" <support@btracsl.com>', // Sender's email and name
+                to: employee.email, // Employee email
+                subject: 'New Visitor Scheduled',
+                html: `
+                    <h1>New Visitor Scheduled</h1>
+                    <p>Dear ${employee.name},</p>
+                    <p>A new visitor has been scheduled for you:</p>
+                    <ul>
+                        <li><strong>Visitor Name:</strong> ${fullname}</li>
+                        <li><strong>Mobile:</strong> ${mobile}</li>
+                        <li><strong>Reason:</strong> ${reason}</li>
+                        <li><strong>Scheduled Date:</strong> ${new Date(pre_schedule_date).toLocaleString('en-US', { timeZone: 'Asia/Dhaka' })}</li>
+                    </ul>
+                    <p>Best Regards,<br>VMS</p>
+                `,
+            };
+    
+            // Send email
+            await transporter.sendMail(mailOptions);
+    
+            req.flash("msg", "Visitor added successfully and email sent to the employee!");
             return res.redirect("/schedule");
         } catch (err) {
             return res.status(500).json({ msg: err.message });
