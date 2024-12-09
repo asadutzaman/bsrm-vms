@@ -98,21 +98,31 @@ const preScheduleVisitorCtrl = {
     },
     save: async (req, res) => {
         try {
-          const { fullname, mobile, pre_schedule_date, reason, employee_id } = req.body;
-          const visitorInfo = new PreScheduleVisitors({
-            fullname,
-            mobile,
-            pre_schedule_date,
-            reason,
-            employee_id, // Save employee ID
-          });
-          await visitorInfo.save();
-          req.flash("msg", "Visitor added successfully!");
-          return res.redirect("/schedule");
+            const { fullname, mobile, pre_schedule_date, reason, employee_id } = req.body;
+    
+            // Fetch employee details using the employee_id
+            const employee = await Employees.findOne({ emp_id: employee_id }).select('-_id emp_id name designation department company');
+            if (!employee) {
+                return res.status(404).json({ msg: "Employee not found!" });
+            }
+    
+            // Prepare the visitor object with employee information
+            const visitorInfo = new PreScheduleVisitors({
+                fullname,
+                mobile,
+                pre_schedule_date,
+                reason,
+                emp_info: employee, // Save the employee details in emp_info
+            });
+    
+            // Save visitor information
+            await visitorInfo.save();
+            req.flash("msg", "Visitor added successfully!");
+            return res.redirect("/schedule");
         } catch (err) {
-          return res.status(500).json({ msg: err.message });
+            return res.status(500).json({ msg: err.message });
         }
-    },      
+    },
 }
 
 module.exports = preScheduleVisitorCtrl
