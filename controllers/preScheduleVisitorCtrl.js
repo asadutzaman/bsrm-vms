@@ -115,28 +115,30 @@ const preScheduleVisitorCtrl = {
         try {
             const { fullname, mobile, pre_schedule_date, reason, employee_id } = req.body;
     
-            // Fetch employee details using the employee_id
-            const employee = await Employees.findOne({ emp_id: employee_id }).select('-_id emp_id email name designation department company');
+            // Fetch employee details
+            const employee = await Employees.findOne({ emp_id: employee_id })
+                .select('-_id emp_id email name designation department company');
+            
             if (!employee) {
-                return res.status(404).json({ msg: "Employee not found!" });
+                req.flash("error", "Employee not found!");
+                return res.redirect("/schedule");
             }
     
-            // Prepare the visitor object with employee information
+            // Save visitor information
             const visitorInfo = new PreScheduleVisitors({
                 fullname,
                 mobile,
                 pre_schedule_date,
                 reason,
-                emp_info: employee, // Save the employee details in emp_info
+                emp_info: employee,
             });
     
-            // Save visitor information
             await visitorInfo.save();
     
-            // Prepare email details
+            // Email details
             const mailOptions = {
-                from: '"VMS" <support@btracsl.com>', // Sender's email and name
-                to: employee.email, // Employee email
+                from: '"VMS" <support@btracsl.com>',
+                to: employee.email,
                 subject: 'New Visitor Scheduled',
                 html: `
                     <h1>New Visitor Scheduled</h1>
@@ -152,13 +154,24 @@ const preScheduleVisitorCtrl = {
                 `,
             };
     
-            // Send email
-            await transporter.sendMail(mailOptions);
+            // Send email with explicit confirmation
+            let emailStatus = '';
+            try {
+                const info = await transporter.sendMail(mailOptions);
+                console.log('Email sent to:', employee.email, 'Message ID:', info.messageId);
+                emailStatus = 'and confirmation email was sent';
+            } catch (emailError) {
+                console.error('Email sending failed to:', employee.email, 'Error:', emailError);
+                emailStatus = 'but email could not be sent';
+            }
     
-            req.flash("msg", "Visitor added successfully and email sent to the employee!");
+            req.flash("success", `Visitor added successfully ${emailStatus}.`);
             return res.redirect("/schedule");
+    
         } catch (err) {
-            return res.status(500).json({ msg: err.message });
+            console.error('System error:', err);
+            req.flash("error", "An unexpected error occurred. Please try again.");
+            return res.redirect("/schedule");
         }
     },
 }
